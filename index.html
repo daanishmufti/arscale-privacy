@@ -4,84 +4,143 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ARScale — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the ARScale augmented-reality measuring app." />
+<link rel="icon" href="logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-         line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; color: #1a1a1a; }
-  @media (prefers-color-scheme: dark) { body { background: #14161a; color: #e7ebf0; } a { color: #7db8ff; } }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 19px; margin-top: 32px; }
-  .updated { color: #888; font-size: 14px; margin-top: 0; }
-  ul { padding-left: 20px; }
-  code { background: rgba(127,127,127,0.15); padding: 1px 5px; border-radius: 4px; }
+  :root { --hivis:#E5FF3A; --ink:#14160a; --bg:#0a0b0e; --text:#d8dce3; --muted:#8b93a1; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    font-family:'Archivo',system-ui,Arial,sans-serif; color:var(--text); line-height:1.65;
+    min-height:100vh; padding:0 20px 80px;
+    background:
+      radial-gradient(70% 60% at 18% -10%, rgba(255,255,255,.06), transparent 60%),
+      radial-gradient(60% 55% at 92% 112%, rgba(229,255,58,.08), transparent 70%),
+      var(--bg);
+  }
+  .wrap { max-width:780px; margin:0 auto; }
+
+  header { padding:56px 0 0; text-align:center; }
+  .brand { display:flex; align-items:center; justify-content:center; gap:18px; }
+  .brand img { width:74px; height:74px; filter:drop-shadow(0 8px 16px rgba(0,0,0,.6)); }
+  .brand h1 { font-family:'Anton',sans-serif; font-weight:400; font-size:52px; letter-spacing:2px; color:#fff; line-height:1; }
+  .brand h1 i { font-style:normal; color:var(--hivis); }
+  .tagline { margin-top:14px; font-weight:800; letter-spacing:3px; font-size:13px; color:var(--muted); text-transform:uppercase; }
+
+  /* hi-vis tape-measure ruler divider */
+  .ruler { position:relative; height:30px; margin:32px 0 0; border-radius:3px; overflow:hidden;
+    background:linear-gradient(180deg,#f9ff86,#e5ff3a 40%,#c8e02b);
+    box-shadow:0 10px 22px rgba(0,0,0,.45), inset 0 2px 0 rgba(255,255,255,.5); }
+  .ruler::before { content:""; position:absolute; inset:0;
+    background:repeating-linear-gradient(90deg, rgba(20,22,10,.85) 0 2px, transparent 2px 26px); }
+  .ruler::after { content:""; position:absolute; left:0; right:0; top:0; height:11px;
+    background:repeating-linear-gradient(90deg, rgba(20,22,10,.5) 0 1.5px, transparent 1.5px 13px); }
+
+  main {
+    background:linear-gradient(180deg, rgba(18,20,25,.92), rgba(11,12,16,.92));
+    border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:28px 30px 10px; margin-top:18px;
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+  }
+  .updated { color:var(--muted); font-size:12.5px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; }
+  .lead { font-size:16px; margin-top:12px; }
+  .lead strong { color:#fff; }
+  h2 { font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:1.4px;
+    font-size:15px; color:var(--hivis); margin:30px 0 6px; display:flex; align-items:center; gap:10px; }
+  h2::before { content:""; width:13px; height:13px; border:2px solid var(--hivis); border-right:0; border-bottom:0; opacity:.7; }
+  p { margin:8px 0; }
+  p strong { color:#fff; }
+  ul { padding-left:20px; margin:8px 0; }
+  a { color:var(--hivis); text-decoration:none; border-bottom:1px solid rgba(229,255,58,.4); }
+  a:hover { border-bottom-color:var(--hivis); }
+  footer { text-align:center; color:var(--muted); font-size:11.5px; margin-top:28px; letter-spacing:2px; font-weight:700; }
+
+  @media (max-width:520px) {
+    .brand h1 { font-size:40px; } .brand img { width:58px; height:58px; }
+    main { padding:22px 20px 8px; }
+  }
 </style>
 </head>
 <body>
-  <h1>Privacy Policy for ARScale</h1>
-  <p class="updated">Last updated: 13 June 2026</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="logo.png" alt="ARScale logo" />
+        <h1>AR<i>SCALE</i></h1>
+      </div>
+      <div class="tagline">Measure anything with your camera</div>
+      <div class="ruler"></div>
+    </header>
 
-  <p>
-    ARScale ("the app") is an augmented-reality measuring tool. This policy explains what the app
-    does and does not do with your information. In short: <strong>ARScale does not collect, store,
-    or share any personal data, and nothing leaves your device.</strong>
-  </p>
+    <main>
+      <p class="updated">Privacy Policy · Last updated 13 June 2026</p>
 
-  <h2>Information we collect</h2>
-  <p>
-    <strong>None.</strong> ARScale does not collect, transmit, or sell any personal or device
-    information. The app has no user accounts, no analytics, no advertising, and no third-party
-    tracking. It does not send your data to us or to anyone else, and it works fully offline.
-  </p>
+      <p class="lead">
+        ARScale (“the app”) is an augmented-reality measuring tool. This policy explains what the app
+        does and does not do with your information. In short: <strong>ARScale does not collect, store,
+        or share any personal data, and nothing leaves your device.</strong>
+      </p>
 
-  <h2>Camera</h2>
-  <p>
-    ARScale requires access to your device camera. The camera feed is used solely, and in real time,
-    on your device to power augmented-reality tracking, measuring, and on-device object outlining.
-    Camera images are processed on the device and are <strong>never stored by the app, never
-    uploaded, and never shared</strong>. The app does not save photos or video.
-  </p>
+      <h2>Information we collect</h2>
+      <p>
+        <strong>None.</strong> ARScale does not collect, transmit, or sell any personal or device
+        information. The app has no user accounts, no analytics, no advertising, and no third-party
+        tracking. It does not send your data to us or to anyone else, and it works fully offline.
+      </p>
 
-  <h2>Motion and position sensors</h2>
-  <p>
-    To place and hold measurements in space, the app reads your device's motion sensors (such as the
-    accelerometer and gyroscope) through Google's augmented-reality services. This information is
-    used only on the device for tracking and is not collected or transmitted.
-  </p>
+      <h2>Camera</h2>
+      <p>
+        ARScale requires access to your device camera. The camera feed is used solely, and in real
+        time, on your device to power augmented-reality tracking, measuring, and on-device object
+        outlining. Camera images are processed on the device and are <strong>never stored by the app,
+        never uploaded, and never shared</strong>. The app does not save photos or video.
+      </p>
 
-  <h2>On-device storage</h2>
-  <p>
-    The app stores small preferences locally on your device — for example, your settings and whether
-    you have seen the in-app tutorial. This data stays on your device and is removed when you
-    uninstall the app.
-  </p>
+      <h2>Motion and position sensors</h2>
+      <p>
+        To place and hold measurements in space, the app reads your device’s motion sensors (such as
+        the accelerometer and gyroscope) through Google’s augmented-reality services. This information
+        is used only on the device for tracking and is not collected or transmitted.
+      </p>
 
-  <h2>Google Play Services for AR (ARCore)</h2>
-  <p>
-    ARScale uses Google Play Services for AR ("ARCore") to provide augmented-reality features. Your
-    use of ARCore is also subject to Google's Privacy Policy, available at
-    <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.
-  </p>
+      <h2>On-device storage</h2>
+      <p>
+        The app stores small preferences locally on your device — for example, your settings and
+        whether you have seen the in-app tutorial. This data stays on your device and is removed when
+        you uninstall the app.
+      </p>
 
-  <h2>Permissions used</h2>
-  <ul>
-    <li><strong>Camera</strong> — required for augmented-reality measuring. Used on-device only.</li>
-  </ul>
+      <h2>Google Play Services for AR (ARCore)</h2>
+      <p>
+        ARScale uses Google Play Services for AR (“ARCore”) to provide augmented-reality features.
+        Your use of ARCore is also subject to Google’s Privacy Policy, available at
+        <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.
+      </p>
 
-  <h2>Children's privacy</h2>
-  <p>
-    ARScale does not collect personal information from anyone, including children.
-  </p>
+      <h2>Permissions used</h2>
+      <ul>
+        <li><strong>Camera</strong> — required for augmented-reality measuring. Used on-device only.</li>
+      </ul>
 
-  <h2>Changes to this policy</h2>
-  <p>
-    If this policy changes, the updated version will be posted at this same address with a new "Last
-    updated" date.
-  </p>
+      <h2>Children’s privacy</h2>
+      <p>ARScale does not collect personal information from anyone, including children.</p>
 
-  <h2>Contact</h2>
-  <p>
-    If you have any questions about this privacy policy, contact us at
-    <a href="mailto:daanishmufti@gmail.com">daanishmufti@gmail.com</a>.
-  </p>
+      <h2>Changes to this policy</h2>
+      <p>
+        If this policy changes, the updated version will be posted at this same address with a new
+        “Last updated” date.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have any questions about this privacy policy, contact us at
+        <a href="mailto:daanishmufti@gmail.com">daanishmufti@gmail.com</a>.
+      </p>
+    </main>
+
+    <footer>ARSCALE · 100% ON-DEVICE · WORKS OFFLINE</footer>
+  </div>
 </body>
 </html>
